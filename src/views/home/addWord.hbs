@@ -1,0 +1,50 @@
+{{>home-navbar}}
+<div class="px-36  pb-36 pt-20 flex justify-center items-center">
+
+<div class="items-center shadow-md shadow-blue-600 flex justify-center mt-56 w-8/12 h-40 rounded-md ">
+   <input type="text" id="xabarInput1" placeholder="Engilsh" class="p-2 border-blue-400 border rounded-md m-2">
+   <input type="text" id="xabarInput2" placeholder="Uzbek" class="p-2 border-blue-400 border rounded-md m-2">
+   <button type="submit" id="jonatButton"   
+      class="w-40 border   border-blue-400  p-2 text-blue-400 rounded-md hover:text-white hover:bg-blue-500 duration-300">Enter</button>
+</div>
+</div>
+<script>
+      const xabarInput1 = document.getElementById("xabarInput1");
+    const xabarInput2 = document.getElementById("xabarInput2");
+    const jonatButton = document.getElementById("jonatButton");
+
+    // Enter tugmasini eslab qolish
+    xabarInput1.addEventListener("keyup", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        jonatXabar();
+      }
+    });
+
+    xabarInput2.addEventListener("keyup", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        jonatXabar();
+      }
+    });
+
+    // Jo'natish tugmasi bosilganda
+    jonatButton.addEventListener("click", function() {
+      jonatXabar();
+    });
+
+    function jonatXabar() {
+      const xabar1 = xabarInput1.value.trim();
+      const xabar2 = xabarInput2.value.trim();
+
+      if (xabar1 !== "" && xabar2 !== "") {
+        const yuborilganXabar =  "English: " + xabar1 + "\nUzbek: " + xabar2;
+        alert(yuborilganXabar);
+
+        xabarInput1.value = "";
+        xabarInput2.value = "";
+      } else {
+        alert("Iltimos, ikkala xabarni ham to'ldiring.");
+      }
+    }
+</script>

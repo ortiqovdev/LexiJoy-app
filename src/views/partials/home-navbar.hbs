@@ -1,0 +1,27 @@
+<div class="w-full h-24 flex justify-between pt-7  fixed bg-blue-400 px-14">
+   <div class="w-12 h-12 rounded-full p-1 border border-white ">
+      <a href="/home" class="text-3xl ml-2 font-semibold text-white">L<span class="text-blue-500">j</span></a>
+   </div>
+   <div class="flex">
+      <a href="/home">
+     
+          <button type="submit"  class="w-24 mx-2 mb-5 border  border-white  p-2 text-white rounded-md hover:text-blue-400 hover:bg-white duration-300  {{#if home}} shadow-sm shadow-black  {{/if}}" >
+            Reading
+          </button>
+      </a>
+     
+      <a href="/home/say">
+          <button type="submit"  class="w-24 mb-5 border mx-2 border-white  p-2 text-white rounded-md hover:text-blue-400 hover:bg-white duration-300   {{#if say}} shadow-sm shadow-black {{/if}}">
+            To say
+          </button>
+      </a>
+      <a href="/home/add">
+          <button type="submit"  class="w-24 mb-5 border mx-2  border-white  p-2 text-white rounded-md hover:text-blue-400 hover:bg-white duration-300  {{#if add}} shadow-sm shadow-black{{/if}}">
+            Add word
+          </button>
+      </a>
+   </div>
+   <div>
+      <a href="/home/profile"> <img src="/imgs/user.jpg" class="rounded-full w-12"> </a>
+   </div>
+</div>
